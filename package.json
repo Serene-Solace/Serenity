@@ -1,6 +1,7 @@
 {
   "name": "@serene-solace/serenity",
   "version": "0.0.5",
+  "private": false,
   "description": "A personalised component library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
