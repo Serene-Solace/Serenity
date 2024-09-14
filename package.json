@@ -1,5 +1,5 @@
 {
-  "name": "@serene-solace/serenity",
+  "name": "solace-serenity",
   "version": "0.0.6",
   "private": false,
   "description": "A personalised component library",
@@ -17,7 +17,7 @@
     "build-storybook": "storybook build"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Serene-Solace"
+    "registry": "https://registry.npmjs.org/"
   },
   "author": "admin@mysolace.in",
   "license": "MIT",
@@ -46,9 +46,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Serene-Solace/Serenity"
+    "url": "git+https://github.com/Serene-Solace/Serenity.git"
   },
   "dependencies": {
     "react": "^18.3.1"
-  }
+  },
+  "keywords": [
+    "solace"
+  ],
+  "bugs": {
+    "url": "https://github.com/Serene-Solace/Serenity/issues"
+  },
+  "homepage": "https://github.com/Serene-Solace/Serenity#readme"
 }
