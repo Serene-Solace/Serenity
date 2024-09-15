@@ -27,7 +27,7 @@ const defaultStyles = (size?: 'small' | 'medium' | 'large', color?: string, styl
 
   return {
     fontSize,
-    color: color || '#283B41',
+    color: color || 'inherit',
     cursor: 'pointer',
     fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 40",
     ...style
@@ -37,6 +37,12 @@ const defaultStyles = (size?: 'small' | 'medium' | 'large', color?: string, styl
 export const DescriptionIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
     description
+  </span>
+)
+
+export const DoneIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    done
   </span>
 )
 
@@ -61,6 +67,12 @@ export const RocketLaunchIcon: React.FC<IconProps> = ({ size, color, style, clas
 export const CloseIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
     close
+  </span>
+)
+
+export const ContentCopyIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    content_copy
   </span>
 )
 
@@ -106,6 +118,12 @@ export const MenuIcon: React.FC<IconProps> = ({ size, color, style, className, o
   </span>
 )
 
+export const MinimizeIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    minimize
+  </span>
+)
+
 export const OpenIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
     open_in_new
@@ -143,6 +161,12 @@ export const SendIcon: React.FC<IconProps> = ({ size, color, style, className, o
   </span>
 )
 
+export const UploadImageIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    add_photo_alternate
+  </span>
+)
+
 export const ArrowDropDown: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
     arrow_drop_down
@@ -176,6 +200,18 @@ export const ArrowForwardIcon: React.FC<IconProps> = ({ size, color, style, clas
 export const AddIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
     add
+  </span>
+)
+
+export const AddCommentIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    add_comment
+  </span>
+)
+
+export const SubtractIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    remove
   </span>
 )
 
@@ -265,24 +301,157 @@ export const HomeIcon: React.FC<IconProps> = ({ size, color, style, className, o
     home
   </span>
 )
-export const AboutUsIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+export const UploadFileIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
-    contacts_product
+    cloud_upload
   </span>
 )
-export const PricingIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+export const WorkspacesIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
-    sell
+    dock_to_right
   </span>
 )
-export const ContactUsIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+export const DocumentsIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
-    perm_phone_msg
+    article
   </span>
 )
-export const LoginIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+export const WarningIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
   <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
-    login
+    warning
+  </span>
+)
+export const ErrorIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    error
+  </span>
+)
+export const DocIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    article
+  </span>
+)
+export const RebaseIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    rebase
+  </span>
+)
+
+export const PreviousIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    history
+  </span>
+)
+
+export const ChatIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    mark_unread_chat_alt
+  </span>
+)
+export const OpenEyeIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    visibility
+  </span>
+)
+export const ClosedEyeIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    visibility_off
+  </span>
+)
+export const PreviewIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    float_landscape_2
+  </span>
+)
+
+export const AccountCircleIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    account_circle
+  </span>
+)
+
+export const KeyVerticalIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    key_vertical
+  </span>
+)
+
+export const ShoppingModeIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    shoppingmode
+  </span>
+)
+
+export const DataUsageIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    data_usage
+  </span>
+)
+export const DownloadDoneIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    download_done
+  </span>
+)
+export const UpwardArrowIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    arrow_upward
+  </span>
+)
+export const CaptureIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    center_focus_weak
+  </span>
+)
+export const PhotoLibraryIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    photo_library
+  </span>
+)
+export const LinkIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    link
+  </span>
+)
+export const RefreshIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    autorenew
+  </span>
+)
+export const VolumeUpIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    volume_up
+  </span>
+)
+export const TickIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    check
+  </span>
+)
+
+// export const ChatFillIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+//   <span className={`material-symbols-outlined ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+//     add_comment
+//   </span>
+// )
+
+export const MicIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    mic
+  </span>
+)
+export const StopIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    stop_circle
+  </span>
+)
+export const ToggleOnIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    toggle_on
+  </span>
+)
+export const ToggleOffIcon: React.FC<IconProps> = ({ size, color, style, className, onClick }) => (
+  <span className={`material-symbols-rounded ${className ? className : ''}`} style={defaultStyles(size, color, style)} onClick={onClick}>
+    toggle_off
   </span>
 )
 // Add more icons as needed
