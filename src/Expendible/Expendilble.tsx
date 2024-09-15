@@ -1,6 +1,6 @@
 import React from 'react'
-import { CustomExpendibleStyledWrapper } from './CustomExpendibleStyledWrapper'
-import { Body } from '../CustomFigmaComponents/CustomTypography'
+import { CustomExpendibleStyledWrapper } from './StyledWrapper'
+import { Body } from '../FigmaComponents/CustomTypography'
 import { ArrowDropDown, ArrowDropDownRight } from '../Icons/Icons'
 
 interface CustomExpendibleProps {

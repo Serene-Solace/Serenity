@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledWrapper } from './StyledWrapper'
 import { formatFileSize } from '../formatters'
 import { CancelIcon } from '../Icons/Icons'
-import { Body } from '../CustomFigmaComponents/CustomTypography'
+import { Body } from '../FigmaComponents/CustomTypography'
 
 interface CustomFileDetailsBoxProps {
   name?: string

@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef, useState } from 'react'
 import { StyledWrapper } from './StyledWrapper'
-import Toast from '../CustomToast/Toast'
+import Toast from '../Toast/Toast'
 
 interface CustomFilesUploadProps {
   isDisabled?: boolean
