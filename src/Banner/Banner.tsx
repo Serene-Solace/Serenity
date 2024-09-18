@@ -39,7 +39,7 @@ const SeverityBgColors: Record<NonNullable<BannerProps['severity']>, string> = {
   success: '#61A659'
 }
 
-const CustomBanner: React.FC<BannerProps> = ({ message, visible = false, reset, severity = 'error', styleOverridesObj, userStatus }) => {
+export const CustomBanner: React.FC<BannerProps> = ({ message, visible = false, reset, severity = 'error', styleOverridesObj, userStatus }) => {
   const navigate = useNavigate()
 
   const resolvedSeverity = severity ?? 'error'
@@ -74,5 +74,3 @@ const CustomBanner: React.FC<BannerProps> = ({ message, visible = false, reset, 
     )
   )
 }
-
-export default CustomBanner

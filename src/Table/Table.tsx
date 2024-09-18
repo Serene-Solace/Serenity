@@ -22,7 +22,7 @@ interface CustomTableProps {
   checkboxSelection?: boolean
 }
 
-const CustomTable: React.FC<CustomTableProps> = ({
+export const CustomTable: React.FC<CustomTableProps> = ({
   rows,
   columns,
   autoHeight,
@@ -93,5 +93,3 @@ const CustomTable: React.FC<CustomTableProps> = ({
     </StyledWrapper>
   )
 }
-
-export default CustomTable

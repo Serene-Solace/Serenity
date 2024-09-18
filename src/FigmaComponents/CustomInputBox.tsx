@@ -56,7 +56,7 @@ const ErrorMessage = styled.div`
   margin-top: 4px;
 `
 /* Functional Component */
-const Input: React.FC<InputProps> = ({ isDisabled, placeholder, value, onChange, showError, errormsg = '' }) => {
+export const Input: React.FC<InputProps> = ({ isDisabled, placeholder, value, onChange, showError, errormsg = '' }) => {
   return (
     <div>
       <StyledInput
@@ -72,5 +72,3 @@ const Input: React.FC<InputProps> = ({ isDisabled, placeholder, value, onChange,
     </div>
   )
 }
-
-export default Input

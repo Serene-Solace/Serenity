@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { H5 } from '../FigmaComponents/CustomTypography'
-import Button from '../FigmaComponents/CustomBtns'
+import { Button } from '../FigmaComponents/CustomBtns'
 
 interface DashboardCardProps {
   title: string
@@ -30,7 +30,7 @@ const CardWrapper = styled.div`
   }
 `
 
-const DashboardCard: React.FC<DashboardCardProps> = ({ title, imgSrc, linkTo, buttonText }) => {
+export const DashboardCard: React.FC<DashboardCardProps> = ({ title, imgSrc, linkTo, buttonText }) => {
   return (
     <CardWrapper>
       <H5>{title}</H5>
@@ -41,5 +41,3 @@ const DashboardCard: React.FC<DashboardCardProps> = ({ title, imgSrc, linkTo, bu
     </CardWrapper>
   )
 }
-
-export default DashboardCard

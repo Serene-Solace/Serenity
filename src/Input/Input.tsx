@@ -114,7 +114,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   }
 `
 
-const CustomInput: React.FC<CustomInputProps> = ({
+export const CustomInput: React.FC<CustomInputProps> = ({
   error,
   inputLabel,
   type = 'text',
@@ -227,5 +227,3 @@ const CustomInput: React.FC<CustomInputProps> = ({
     </StyledWrapper>
   )
 }
-
-export default CustomInput
