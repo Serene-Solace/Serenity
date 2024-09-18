@@ -22,6 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Stash uncommitted changes
+        run: |
+          git stash --include-untracked  
+
       - name: Bump version
         run: |
           npm version patch # Or use 'minor' or 'major' depending on your strategy
