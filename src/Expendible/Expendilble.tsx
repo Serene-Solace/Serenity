@@ -10,7 +10,7 @@ interface CustomExpendibleProps {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const CustomExpendible: React.FC<CustomExpendibleProps> = ({ title, children, open, setOpen }) => {
+export const CustomExpendible: React.FC<CustomExpendibleProps> = ({ title, children, open, setOpen }) => {
   return (
     <CustomExpendibleStyledWrapper>
       {!open && (
@@ -27,5 +27,3 @@ const CustomExpendible: React.FC<CustomExpendibleProps> = ({ title, children, op
     </CustomExpendibleStyledWrapper>
   )
 }
-
-export default CustomExpendible

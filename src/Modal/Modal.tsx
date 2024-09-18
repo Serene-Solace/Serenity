@@ -37,7 +37,7 @@ let defaultStyle: SxProps<Theme> = {
   }
 }
 
-const CustomModal: React.FC<CustomModalProps> = ({ children, open, handleClose, styleOverridesObj }) => {
+export const CustomModal: React.FC<CustomModalProps> = ({ children, open, handleClose, styleOverridesObj }) => {
   const combinedStyles = styleOverridesObj ? { ...defaultStyle, ...styleOverridesObj } : defaultStyle
 
   return (
@@ -46,5 +46,3 @@ const CustomModal: React.FC<CustomModalProps> = ({ children, open, handleClose, 
     </Modal>
   )
 }
-
-export default CustomModal

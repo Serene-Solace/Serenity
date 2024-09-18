@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify'
 import { CancelIcon, CloseIcon, InfoIcon, VerifyIcon, WarningIcon } from '../Icons/Icons'
 
-const Toast = (message = 'Default Message Here', toastType = 'default', _position = 'bottom-right') => {
+export const Toast = (message = 'Default Message Here', toastType = 'default', _position = 'bottom-right') => {
   switch (toastType) {
     case 'success':
       toast.success(
@@ -64,5 +64,3 @@ const Toast = (message = 'Default Message Here', toastType = 'default', _positio
       )
   }
 }
-
-export default Toast

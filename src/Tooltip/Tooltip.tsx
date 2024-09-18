@@ -1,7 +1,7 @@
 import { Tooltip, TooltipProps, tooltipClasses } from '@mui/material'
 import styled from 'styled-components'
 
-const CustomToolTip = styled(({ className, ...props }: TooltipProps) => <Tooltip {...props} classes={{ popper: className }} />)(() => ({
+export const CustomToolTip = styled(({ className, ...props }: TooltipProps) => <Tooltip {...props} classes={{ popper: className }} />)(() => ({
   [`& .${tooltipClasses.arrow}`]: {
     color: '#283B41'
   },
@@ -16,5 +16,3 @@ const CustomToolTip = styled(({ className, ...props }: TooltipProps) => <Tooltip
     zIndex: 999999999
   }
 }))
-
-export default CustomToolTip

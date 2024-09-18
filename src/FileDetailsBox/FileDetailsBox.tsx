@@ -11,7 +11,7 @@ interface CustomFileDetailsBoxProps {
   isNew?: boolean
 }
 
-const CustomFileDetailsBox: React.FC<CustomFileDetailsBoxProps> = ({ name, size, onClick, isNew }) => {
+export const CustomFileDetailsBox: React.FC<CustomFileDetailsBoxProps> = ({ name, size, onClick, isNew }) => {
   return (
     <StyledWrapper>
       <div className='file'>
@@ -25,5 +25,3 @@ const CustomFileDetailsBox: React.FC<CustomFileDetailsBoxProps> = ({ name, size,
     </StyledWrapper>
   )
 }
-
-export default CustomFileDetailsBox

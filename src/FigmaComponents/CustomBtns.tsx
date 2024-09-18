@@ -9,7 +9,7 @@ interface ButtonProps {
   children: React.ReactNode
 }
 
-const Button = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   height: 36px;
@@ -107,5 +107,3 @@ const Button = styled.button<ButtonProps>`
       color: #ffffff;
     `}
 `
-
-export default Button

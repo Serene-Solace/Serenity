@@ -84,7 +84,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   }
 `
 
-const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
+export const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
   error,
   inputLabel,
   type = 'text',
@@ -123,5 +123,3 @@ const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
     </StyledWrapper>
   )
 }
-
-export default CustomDropDownInput

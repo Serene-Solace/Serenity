@@ -34,7 +34,7 @@ const StyledFileActions = styled.div`
   }
 `
 
-const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, onClose, items, sx }) => {
+export const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, onClose, items, sx }) => {
   return (
     <Popover
       open={open}
@@ -59,5 +59,3 @@ const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, onClose, 
     </Popover>
   )
 }
-
-export default CustomPopover
