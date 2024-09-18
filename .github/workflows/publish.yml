@@ -29,6 +29,8 @@ jobs:
       - name: Bump version
         run: |
           npm version patch # Or use 'minor' or 'major' depending on your strategy
+          git config --global user.email "admin@mysolace.in"
+          git config --global user.name "Admin"
           git push origin main
 
       - name: Publish to npm
