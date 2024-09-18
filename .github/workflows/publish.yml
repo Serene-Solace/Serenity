@@ -34,7 +34,7 @@ jobs:
       - name: Bump version
         run: |
           npm version patch # Or use 'minor' or 'major' depending on your strategy
-          git push origin main
+          git push origin main --follow-tags
 
       - name: Publish to npm
         run: npm publish
