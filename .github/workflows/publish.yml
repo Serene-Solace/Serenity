@@ -2,8 +2,8 @@ name: Publish to npm
 
 on:
   pull_request:
-    types:
-      - closed
+    branches:
+      - devo
 
 jobs:
   publish:
@@ -22,15 +22,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Configure Git user
+        run: |
+          git config --global user.email "admin@mysolace.in"
+          git config --global user.name "Admin"
+
       - name: Stash uncommitted changes
         run: |
-          git stash --include-untracked  
+          git stash --include-untracked
 
       - name: Bump version
         run: |
           npm version patch # Or use 'minor' or 'major' depending on your strategy
-          git config --global user.email "admin@mysolace.in"
-          git config --global user.name "Admin"
           git push origin main
 
       - name: Publish to npm
