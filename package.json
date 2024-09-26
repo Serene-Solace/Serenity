@@ -1,6 +1,6 @@
 {
   "name": "solace-serenity",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "private": false,
   "description": "A personalised component library",
   "main": "dist/cjs/index.js",
@@ -49,6 +49,12 @@
     "type": "git",
     "url": "git+https://github.com/Serene-Solace/Serenity.git"
   },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2",
+    "react-toastify": "^10.0.5"
+  },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -56,9 +62,6 @@
     "@mui/x-data-grid": "^7.17.0",
     "date-fns": "^4.0.0-beta.1",
     "framer-motion": "^11.5.4",
-    "react": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "react-toastify": "^10.0.5",
     "styled-components": "^6.1.13"
   },
   "keywords": [
