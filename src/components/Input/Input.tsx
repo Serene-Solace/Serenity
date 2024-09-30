@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { ClosedEyeIcon, OpenEyeIcon } from '../Icons/Icons'
-import { mediaQueries } from '../mediaQueries'
 import { motion, useAnimation } from 'framer-motion'
+import { mediaQueries } from '../../mediaQueries'
+import { ClosedEyeIcon, OpenEyeIcon } from '../../Icons/Icons'
 
-interface CustomInputProps {
+export interface CustomInputProps {
   error?: string | false | undefined | boolean
   inputLabel?: string
   type: 'text' | 'password' | 'email'
@@ -114,7 +114,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   }
 `
 
-export const CustomInput: React.FC<CustomInputProps> = ({
+ const Input: React.FC<CustomInputProps> = ({
   error,
   inputLabel,
   type = 'text',
@@ -227,3 +227,5 @@ export const CustomInput: React.FC<CustomInputProps> = ({
     </StyledWrapper>
   )
 }
+
+export default Input
