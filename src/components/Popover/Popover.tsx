@@ -1,6 +1,6 @@
 import React from 'react'
-import Popover from '@mui/material/Popover'
 import styled from 'styled-components'
+import Popover from '@mui/material/Popover'
 import { SxProps, Theme } from '@mui/system'
 
 interface PopoverItem {
@@ -8,7 +8,7 @@ interface PopoverItem {
   onClick?: () => void
 }
 
-interface CustomPopoverProps {
+export interface CustomPopoverProps {
   open: boolean
   anchorEl: HTMLElement | null
   onClose: () => void
@@ -34,7 +34,7 @@ const StyledFileActions = styled.div`
   }
 `
 
-export const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, onClose, items, sx }) => {
+ const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, onClose, items, sx }) => {
   return (
     <Popover
       open={open}
@@ -59,3 +59,5 @@ export const CustomPopover: React.FC<CustomPopoverProps> = ({ open, anchorEl, on
     </Popover>
   )
 }
+
+export default CustomPopover;
