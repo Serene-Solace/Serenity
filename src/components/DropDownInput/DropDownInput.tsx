@@ -1,31 +1,31 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-interface CustomDropDownInputProps {
-  error?: string | false | undefined | boolean
-  inputLabel?: string
-  type: 'text' | 'password' | 'email'
-  inputPlaceholder?: string
-  value: string
-  allfilled?: boolean
-  disabled?: boolean
-  onChange?: React.ChangeEventHandler<HTMLInputElement>
-  onBlur?: React.FocusEventHandler<HTMLInputElement>
-  handleVerifyClick?: () => void
-  customBorder?: string
-  customPadding?: string
-  style?: React.CSSProperties
-  showLabel?: boolean
-  showError?: boolean
-  id: string
-  readOnly?: boolean
-  onClick?: () => void
+import React from "react";
+import styled, { css } from "styled-components";
+export interface CustomDropDownInputProps {
+  error?: string | false | undefined | boolean;
+  inputLabel?: string;
+  type: "text" | "password" | "email";
+  inputPlaceholder?: string;
+  value: string;
+  allfilled?: boolean;
+  disabled?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  handleVerifyClick?: () => void;
+  customBorder?: string;
+  customPadding?: string;
+  style?: React.CSSProperties;
+  showLabel?: boolean;
+  showError?: boolean;
+  id: string;
+  readOnly?: boolean;
+  onClick?: () => void;
 }
 
 interface StyledWrapperProps {
-  $customBorder?: string
-  $customPadding?: string
-  isDisabled?: boolean
-  showError?: boolean
+  $customBorder?: string;
+  $customPadding?: string;
+  isDisabled?: boolean;
+  showError?: boolean;
 }
 
 const StyledWrapper = styled.div<StyledWrapperProps>`
@@ -33,7 +33,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  font-family: 'RALEWAY';
+  font-family: "RALEWAY";
   width: 100%;
 
   .input-label {
@@ -58,14 +58,14 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
       width: 100%;
       border-radius: 8px;
       outline: none;
-      font-family: 'Raleway';
+      font-family: "Raleway";
       font-weight: 500;
       font-size: 0.85rem;
       line-height: 0.75rem;
       background-color: white;
       height: 2.25rem;
-      border: ${({ $customBorder }) => $customBorder || 'none'};
-      padding: ${({ $customPadding }) => $customPadding || '0 1rem'};
+      border: ${({ $customBorder }) => $customBorder || "none"};
+      padding: ${({ $customPadding }) => $customPadding || "0 1rem"};
       &:focus {
         border: 1px solid #283b4199;
       }
@@ -82,12 +82,12 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
     font-size: 0.75rem;
     color: red;
   }
-`
+`;
 
-export const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
+const DropDownInput: React.FC<CustomDropDownInputProps> = ({
   error,
   inputLabel,
-  type = 'text',
+  type = "text",
   inputPlaceholder,
   value,
   disabled = false,
@@ -99,17 +99,21 @@ export const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
   showError,
   id,
   readOnly = false,
-  onClick
+  onClick,
 }) => {
   return (
-    <StyledWrapper $customBorder={customBorder} $customPadding={customPadding} showError={!!error || showError}>
-      {inputLabel && <label className='input-label'>{inputLabel}</label>}
-      <div onClick={onClick} className='input-container'>
+    <StyledWrapper
+      $customBorder={customBorder}
+      $customPadding={customPadding}
+      showError={!!error || showError}
+    >
+      {inputLabel && <label className="input-label">{inputLabel}</label>}
+      <div onClick={onClick} className="input-container">
         <input
           id={id}
           name={id}
           type={type}
-          className='input-field'
+          className="input-field"
           placeholder={inputPlaceholder}
           value={value}
           onChange={onChange}
@@ -119,7 +123,9 @@ export const CustomDropDownInput: React.FC<CustomDropDownInputProps> = ({
           readOnly={readOnly}
         />
       </div>
-      {error && <span className='error-text'>{error}</span>}
+      {error && <span className="error-text">{error}</span>}
     </StyledWrapper>
-  )
-}
+  );
+};
+
+export default DropDownInput;
