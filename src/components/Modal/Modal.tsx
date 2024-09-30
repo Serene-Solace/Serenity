@@ -1,8 +1,7 @@
+import { Box, Modal, SxProps, Theme } from '@mui/material'
 import React from 'react'
-import Modal from '@mui/material/Modal'
-import { Box, SxProps, Theme } from '@mui/material'
 
-interface CustomModalProps {
+export interface CustomModalProps {
   children: React.ReactNode
   open: boolean
   handleClose: () => void
@@ -37,7 +36,7 @@ let defaultStyle: SxProps<Theme> = {
   }
 }
 
-export const CustomModal: React.FC<CustomModalProps> = ({ children, open, handleClose, styleOverridesObj }) => {
+ const CustomModal: React.FC<CustomModalProps> = ({ children, open, handleClose, styleOverridesObj }) => {
   const combinedStyles = styleOverridesObj ? { ...defaultStyle, ...styleOverridesObj } : defaultStyle
 
   return (
@@ -46,3 +45,5 @@ export const CustomModal: React.FC<CustomModalProps> = ({ children, open, handle
     </Modal>
   )
 }
+
+export default CustomModal
