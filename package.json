@@ -1,6 +1,6 @@
 {
   "name": "solace-serenity",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "private": false,
   "description": "A personalised component library",
   "main": "dist/cjs/index.js",
