@@ -1,3 +1,4 @@
+import React from 'react'
 import { MenuItem } from '@mui/material'
 
 export interface MenuItemOwnProps {
@@ -5,10 +6,12 @@ export interface MenuItemOwnProps {
   children: React.ReactNode
 }
 
-export const CustomMenuItem: React.FC<MenuItemOwnProps> = ({ onClick, children }) => {
+ const CustomMenuItem: React.FC<MenuItemOwnProps> = ({ onClick, children }) => {
   return (
     <MenuItem style={{ fontFamily: 'Raleway', borderRadius: 0 }} onClick={onClick}>
       {children}
     </MenuItem>
   )
 }
+
+export default CustomMenuItem;
